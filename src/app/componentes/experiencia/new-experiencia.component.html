@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="row">
+        <div>
+            <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="nombreExp">Experiencia laboral</label>
+                    <input type="text" class="form-control" id="nombreExp" name="nombreExp" [(ngModel)]="nombreExp" required>
+                </div>
+                <div class="form-group">
+                    <label for="descripcion">Agregue un descripción</label>
+                    <input type="text" class="form-control"  id="descripcion" name="descripcion" [(ngModel)]="descripcion" required>
+                </div>
+                <div class="form-group">
+                    <label for="fechaInicio"> Fecha de inicio: 
+                        <input type="date" class="form-control" id="fechaInicio" name="fechaInicio" min="1990-01-01" max="2022-12-01" [(ngModel)]="fechaInicio" required/>
+                    </label>
+                    <label for="fechaFin"> Fecha de fin: 
+                        <input type="date" class="form-control" id="fechaFin" name="fechaFin" min="1990-01-01" max="2030-12-30" [(ngModel)]="fechaFin" required/>
+                    </label>
+                </div>
+
+                <button class="btn btn-primary">
+                    Agregar Experiencia
+                </button>
+            </form>
+        </div>
+    </div>
+</div>

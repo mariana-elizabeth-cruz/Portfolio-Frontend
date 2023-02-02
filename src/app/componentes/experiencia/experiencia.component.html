@@ -8,7 +8,7 @@
                 </div>
                 <!-- boton de agregacion -->
                 <div class="col-4 d-grid gap-2 d-md-flex justify-content-md-end">
-                    <button class="btn btn-plus">
+                    <button class="btn btn-plus" routerLink= "/nuevaexp" *ngIf="isLogged">
                         <i class="fa-solid fa-plus"></i>
                     </button>
                 </div>       
@@ -18,17 +18,22 @@
 
         <!-- lista de experiencia -->
         <ul class="list-group ">
-            <li *ngFor="let e of experienciaLista.experiencias" class="list-group-item">
+            <li *ngFor="let experiencia of experiencia" class="list-group-item">
                 <!-- botones de edicion -->
                 <div class="position-absolute top-0 end-0">
-                    <!-- boton edit 3 -->
-                    <button class="btn">
-                        <i class="fa-solid fa-pen"></i>    
-                    </button>
-                    <!-- boton de eliminar -->
-                    <button class="btn">
-                        <i class="fa-solid fa-trash-can"></i>
-                    </button>
+                    <td *ngIf="isLogged">
+                        <!-- boton edit 3 -->
+                        <button class="btn" routerLink="/editexp/{{experiencia.id}}">
+                            <i class="fa-solid fa-pen"></i>    
+                        </button>
+                    </td>
+                    <td *ngIf="isLogged">
+                        <!-- boton de eliminar -->
+                        <button class="btn" (click)="delete(experiencia.id)">
+                            <i class="fa-solid fa-trash-can"></i>
+                        </button>
+                    </td>
+                    
                 </div>
                 <!-- fin de botones -->
 
@@ -36,17 +41,16 @@
                 <!-- filas -->
                 <div class="row">
                     <!-- columnas -->
-                    <div class="col-xl-4 col-sm-4 p-3 bd-highlight">
+                    <div class="col-xl-3 col-sm-3 p-3 bd-highlight">
                         <!-- falta imagen -->    
                         <img [src]="'../assets/img/work.jpg'" class="img-fluid" alt="trabajo">
                     </div> 
-                    <div class="col-xl-8 col-sm-8 p-2 bd-highlight">
+                    <div class="col-xl-9 col-sm-9 p-2 bd-highlight">
                         <div class="card-body">
-                            <h4 class="card-title">{{e.cargo}}</h4>
-                            
-                            <p class="card-text"><small class="text-muted"><time>{{e.start}}</time> - <time>{{e.end}}</time></small></p>
-                            <p class="card-text"><small class="text-muted"><time>{{e.duracion}}</time> </small></p>
-                            <p class="card-text text-muted">{{e.ubicacion}}</p>
+                            <h4 class="card-title">{{experiencia.nombreExp}}</h4>
+                            <p class="card-text text-muted">{{experiencia.descripcion}}</p>
+                            <p class="card-text">{{experiencia.fechaInicio| date: "shortDate"}} - {{experiencia.fechaFin| date: "shortDate"}}</p>
+
                         </div>
                     </div>
                     <!-- fin columnas -->
@@ -59,5 +63,4 @@
     </div>
     
 
-    
 </section>
