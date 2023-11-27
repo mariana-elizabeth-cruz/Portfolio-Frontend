@@ -1,59 +1,57 @@
 <header class="sticky-top">
     <!-- los enlaces con navbar-expand... se expande a mitad de pantalla  -->
-    <nav class=" navbar navbar-expand-md navbar-dark bg-dark">
+    <nav class=" navbar navbar-expand-md navbar-dark bg-dark estiloMenu">
         <div class="container"> <!-- para centrar el contenido -->
             <!-- titulo de la navegacion -->
             <h1 class="nombre">
+                <img [src]="'../assets/img/logo.png'" alt="">
                 Mariana Cruz
             </h1>
             
-                <!-- lista de navegacion -->
-                
-                <div class="hamburger-menu">
-                    <input id="menuToggle" type="checkbox">
-                    <label class="menu__btn" for="menuToggle">
-                        <span></span>
-                    </label>
+            <!-- lista de navegacion -->                
+            <div class="hamburger-menu">
+                <input id="menuToggle" type="checkbox">
+                <label class="menu__btn" for="menuToggle">
+                    <span></span>
+                </label>
 
-                    <!-- social media -->
-                    <ul class="navbar-nav ml-auto menu__box">
-                            <!-- FB -->
-                        <li class="nav-item">
-                            <a href="https://www.facebook.com/" class="btn btn-style nav-link enlaceNone menu__item" target="_blank">
-                                <i class="fa-brands fa-facebook-square"></i>
-                            </a>
-                        </li>
-                        <!-- IG -->
-                        <li class="nav-item">
-                            <a href="https://www.instagram.com/" class="btn btn-style nav-link enlaceNone menu__item" target="_blank">
-                                <i class="fa-brands fa-instagram"></i>
-                            </a>
-                        </li>
-                        <!-- TWITTER -->
-                        <li class="nav-item">
-                            <a href="https://www.twitter.com/" class="btn btn-style nav-link enlaceNone menu__item" target="_blank">
-                                <i class="fa-brands fa-twitter"></i>
-                            </a>
-                        </li>
-                        <!-- GITHUB -->
-                        <li class="nav-item">
-                            <a href="https://github.com/meryeliz" class="btn btn-style nav-link enlaceNone menu__item" target="_blank">
-                                <i class="fa-brands fa-github"></i>
-                            </a>
-                        </li>
-                        <!-- enlace de login -->
-                        <li class="nav-item">
-                            <a  class="btn btn-style nav-link enlaceNone menu__item fs-3" (click)="login()" *ngIf="!isLogged" ><i class="fa-solid fa-right-to-bracket"></i>
-                                Login
-                            </a>
-                            
-                            <a class="btn btn-style nav-link enlaceNone menu__item fs-4" (click)="onLogOut()" *ngIf="isLogged"><i class="fa-solid fa-door-open"></i>
-                                Cerrar sesión
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            
+                <!-- social media -->
+                <ul class="navbar-nav ml-auto menu__box">
+                        <!-- FB -->
+                    <li class="nav-item">
+                        <a href="https://www.facebook.com/" class="btn btn-style nav-link enlaceNone menu__item" target="_blank">
+                            <i class="fa-brands fa-facebook-square"></i>
+                        </a>
+                    </li>
+                    <!-- IG -->
+                    <li class="nav-item">
+                        <a href="https://www.instagram.com/" class="btn btn-style nav-link enlaceNone menu__item" target="_blank">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </li>
+                    <!-- TWITTER -->
+                    <li class="nav-item">
+                        <a href="https://www.twitter.com/" class="btn btn-style nav-link enlaceNone menu__item" target="_blank">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                    </li>
+                    <!-- GITHUB -->
+                    <li class="nav-item">
+                        <a href="https://github.com/meryeliz" class="btn btn-style nav-link enlaceNone menu__item" target="_blank">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                    </li>
+                    <!-- enlace de login -->
+                    <li class="nav-item">
+                        <a  class="btn btn-style nav-link enlaceNone menu__item fs-3" (click)="login()" *ngIf="!isLogged" ><i class="fa-solid fa-right-to-bracket"></i>
+                            Login
+                        </a> 
+                        <a class="btn btn-style nav-link enlaceNone menu__item fs-4" (click)="onLogOut()" *ngIf="isLogged"><i class="fa-solid fa-door-open"></i>
+                            Cerrar sesión
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
 </header>

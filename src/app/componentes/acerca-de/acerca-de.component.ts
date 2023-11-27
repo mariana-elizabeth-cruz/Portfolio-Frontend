@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { PorfolioService } from 'src/app/servicios/porfolio.service';
+import { Persona } from 'src/app/models/persona';
+import { PersonaService } from 'src/app/servicios/persona.service';
+import { TokenService } from 'src/app/servicios/token.service';
 
 @Component({
   selector: 'app-acerca-de',
@@ -7,18 +9,24 @@ import { PorfolioService } from 'src/app/servicios/porfolio.service';
   styleUrls: ['./acerca-de.component.css']
 })
 export class AcercaDeComponent implements OnInit {
-  //prueba para servicios
-  miPorfolio: any;
-  constructor(private datosPorfolio:PorfolioService) { }
+  persona: Persona = null;
+
+  constructor(private personaService: PersonaService, private tokenService: TokenService) { }
+  isLogged = false;
 
   ngOnInit(): void {
-    //acceso a los metodos o propiedades
-    this.datosPorfolio.obtenerDatos().subscribe(data => {
-      //se muestra en consola los datos del json
-      console.log(data);
-      this.miPorfolio = data;
-    });
+    this.cargarPersona();
+    if (this.tokenService.getToken()) {
+      this.isLogged = true;
+    } else {
+      this.isLogged = false;
+    }
+  }
 
+  cargarPersona(){
+    this.personaService.detail(1).subscribe(data =>
+      {this.persona = data}
+      )
   }
 
 }

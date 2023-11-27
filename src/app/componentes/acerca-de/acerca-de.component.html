@@ -1,52 +1,59 @@
 <article>
-    <section >
+    <section>
         <div class="bordesPort">
             <div class="position-relative">
                 <div  class="position-absolute top-0 start-0">
                     <!-- img perfil  -->
-                    <img [src]="miPorfolio.imgPerfil" alt="fotoPerfil" class="imgPerfil" >    
+                    <img src={{persona.img}} alt="foto Perfil" class="imgPerfil" >    
                 </div>
             </div>
             
-            <!-- boton edit 1 -->
+            <!-- botón edit 1 -->
             <div class="position-absolute">
                 <div class="edit1">
                     <button class="btn">
                         <i class="fa-solid fa-pen"></i>
                     </button>
                 </div>
+                <!-- <td *ngIf="isLogged"> -->
+                    <!-- boton edit 3 -->
+                    <!-- <button class="btn" routerLink="/editexp/{{experiencia.id}}">
+                        <i class="fa-solid fa-pen"></i>    
+                    </button>
+                </td> -->
             </div>
             <!-- titulo -->
             <div class="margenesT">
-                <h1>{{miPorfolio.name}}</h1>
-                <p>{{miPorfolio.position}}</p>
-                <p>{{miPorfolio.ubicacion}}<a href="#" class="enlaceNone"> Información de Contacto</a></p>
+                <h1>{{persona.nombre}} {{persona.apellido}}</h1>
+                <p>Full Stack Developer Jr</p>
+                <p>Santiago del Estero, Argentina</p>
+                <p><a href="#" class="enlaceNone">Información de Contacto</a></p>
             </div>
 
             <div class="botSection1">
                 <!-- botones -->
-                <button class="btn btn-success text-white">Tengo interes en</button>
-                <button class="btn btn-outline-secondary">Añadir Sección</button>
-                <button class="btn btn-outline-dark">Más</button>    
+                <button type="button" class="btn btn-primary">Tengo interes en</button>
+                <button type="button" class="btn btn-outline-dark">Añadir Sección</button>
+                <button type="button" class="btn btn-outline-dark">Más</button> 
             </div>
-        </div>
-            
-        
+        </div>  
     </section>
         
-            <!-- acerca de -->
+    <!-- acerca de -->
     <section class="about">
-            <div class="position-relative">
-                <h3>Acerca de mi</h3>
-                <p>{{miPorfolio.about}}</p>
+        <div class="position-relative text-center">
+            <h3>Acerca de mi</h3>
+            <p>{{persona.descripcion}}</p>
             <!-- edit 2 -->
-                <div class="position-absolute top-0 end-0">
-                    <button class="btn">
-                        <i class="fa-solid fa-pen"></i>
+            <div class="position-absolute top-0 end-0">
+                <td *ngIf="isLogged">
+                    <!-- boton edit 3 -->
+                    <button class="btn" routerLink="/editacercade/1">
+                        <i class="fa-solid fa-pen"></i>    
                     </button>
-                </div>
+                </td>
             </div>
-        
+        </div>
     </section>
 </article>
 <!-- end -->

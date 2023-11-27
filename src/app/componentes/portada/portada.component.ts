@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { PorfolioService } from 'src/app/servicios/porfolio.service';
 
 @Component({
   selector: 'app-portada',
@@ -8,15 +7,12 @@ import { PorfolioService } from 'src/app/servicios/porfolio.service';
 })
 export class PortadaComponent implements OnInit {
   //para llamar a los datos que tiene el json
-  miPorfolio: any;
+  
 
-  constructor(private datosPorfolio:PorfolioService) { }
+  constructor() { }
 
   ngOnInit(): void {
-    this.datosPorfolio.obtenerDatos().subscribe(data => {
-      console.log(data);
-      this.miPorfolio = data;
-    })
+    
   }
 
 }
