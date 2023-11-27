@@ -1,10 +1,10 @@
 <!-- Educacion -->
-<section class="education">
+<section class="educacion">
     <div class="position-relative">
         <div class="container">
             <div class="row">
                 <div class="col-8">
-                    <h3>Educación</h3>
+                    <h2>Educación</h2>
                 </div>
                 <!-- boton de agregacion -->
                 <div class="col-4 d-grid gap-2 d-md-flex justify-content-md-end"> 
@@ -44,17 +44,16 @@
                     <!-- filas -->
                     <div class="row">
                         <!-- columnas -->
-                        <div class="col-xl-4 col-sm-4 p-3 bd-highlight">
+                        <div class="col-xl-5 col-sm-4 p-3">
                             <!-- imagen para educacion -->
                             <img [src]="'../assets/img/birrete.png'" class="mx-auto d-block imgSchool" alt="birrete">
                         </div>
-                        <div class="col-xl-8 col-sm-8 p-2 bd-highlight">
+                        <div class="col-xl-7 col-sm-8 p-2">
                             <div class="card-body">
-                                <h5 class="card-title">{{educacion.nomEscuela}}</h5>
+                                <h3 class="card-title">{{educacion.nomEscuela}}</h3>
                                 <p class="card-text">{{educacion.descripcion}}</p>
                                 <p class="card-text">{{educacion.ciudad}}</p>
                                 <p class="card-text">{{educacion.fechaInicio | date: "shortDate"}} - {{educacion.fechaFin | date: "shortDate"}}</p>
-                                
                             </div>
                         </div>
                         <!-- fin de columnas -->

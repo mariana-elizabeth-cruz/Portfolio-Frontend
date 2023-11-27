@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 //Importamos nuestros comonenetes
@@ -10,6 +10,7 @@ import { NewEducacionComponent } from '../componentes/educacion/new-educacion.co
 import { EditEducacionComponent } from '../componentes/educacion/edit-educacion.component';
 import { NewExperienciaComponent } from '../componentes/experiencia/new-experiencia.component';
 import { EditExperienciaComponent } from '../componentes/experiencia/edit-experiencia.component';
+import { EditAcercaDeComponent } from '../componentes/acerca-de/edit-acerca-de.component';
 
 
 
@@ -22,7 +23,8 @@ const routes: Routes = [
   { path: 'nuevaedu', component: NewEducacionComponent },
   { path: 'editedu/:id', component: EditEducacionComponent },
   { path: 'nuevaexp' ,  component: NewExperienciaComponent },
-  { path: 'editexp/:id', component: EditExperienciaComponent}
+  { path: 'editexp/:id', component: EditExperienciaComponent},
+  { path: 'editacercade/:id', component: EditAcercaDeComponent}
 
 ];
 

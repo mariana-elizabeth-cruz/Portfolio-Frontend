@@ -6,7 +6,6 @@ import { PortadaComponent } from './componentes/portada/portada.component';
 import { AcercaDeComponent } from './componentes/acerca-de/acerca-de.component';
 import { EducacionComponent } from './componentes/educacion/educacion.component';
 import { ProyectosComponent } from './componentes/proyectos/proyectos.component';
-import { PorfolioService } from './servicios/porfolio.service';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module.ts/app-routing.module.ts.module';
 import { LoginComponent } from './componentes/login/login.component';
@@ -24,8 +23,7 @@ import { EditEducacionComponent } from './componentes/educacion/edit-educacion.c
 import { NewEducacionComponent } from './componentes/educacion/new-educacion.component';
 import { NewExperienciaComponent } from './componentes/experiencia/new-experiencia.component';
 import { EditExperienciaComponent } from './componentes/experiencia/edit-experiencia.component';
-
-
+import { EditAcercaDeComponent } from './componentes/acerca-de/edit-acerca-de.component';
 
 
 @NgModule({
@@ -46,7 +44,8 @@ import { EditExperienciaComponent } from './componentes/experiencia/edit-experie
     EditEducacionComponent,
     NewEducacionComponent,
     NewExperienciaComponent,
-    EditExperienciaComponent
+    EditExperienciaComponent,
+    EditAcercaDeComponent
     
   ],
   imports: [

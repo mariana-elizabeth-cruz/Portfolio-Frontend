@@ -1,4 +1,6 @@
-
+body {
+    background: linear-gradient(to bottom, #417899, #fbe1a3);
+}
 /*estilo para encabezado*/
 .bordesPort {
     border-radius: 0 0 45px 45px;
@@ -33,8 +35,10 @@
     padding-right: 5px;
     padding-bottom: 5px;
     font-size: 25px;
-    color: grey;
-
+    color: #717171;
+}
+.nombre img {
+    width: 160px;
 }
 .btn-style {
     color: rgb(156, 154, 154);
@@ -43,6 +47,9 @@
 .btn-size {
     font-size: 20px;
     margin-top: 10px;
+}
+.estiloMenu {
+    height: 110px;
 }
 
 /*Estilo para imagenes*/
@@ -72,7 +79,10 @@
 .botSection1 {
     padding-left: 15px;
 }
-
+.botSection1 button {
+    margin: 8px;
+    padding: 7px;
+}
 .edit1 {
     position: relative;
     right: -160px;
@@ -89,27 +99,33 @@
 .about {
     border-radius: 45px 45px 45px 45px;
     border: solid 1px rgb(201, 203, 204);
-    margin: 15px;
-    padding: 20px;
+    margin: 35px;
+    padding: 25px;
+    box-shadow: 10px 10px 30px #000000;
 }
 
 /*---End---*/
 
-/*estilo exoeriencia*/
+/*Estilo exoeriencia*/
 .expe {
     border-radius: 45px 45px 45px 45px;
     border: solid 1px rgb(201, 203, 204);
-    margin: 15px;
-    padding: 20px;
+    margin: 35px;
+    padding: 25px;
+    box-shadow: 10px 10px 30px #000000;
+}
+.expeImg {
+    width: 180px;
 }
 
 /*---End---*/
 /*educ*/
-.education{
+.educacion{
     border-radius: 45px 45px 45px 45px;
     border: solid 1px rgb(201, 203, 204);
-    margin: 15px;
-    padding: 20px;
+    margin: 35px;
+    padding: 25px;
+    box-shadow: 10px 10px 30px #000000;
 }
 
 .imgSchool {
@@ -118,7 +134,7 @@
 
 }
 /*estilo seccion educacion*/
-div.education {
+div.educacion {
     list-style: none;
 }
 .btn-plus {
@@ -130,8 +146,9 @@ div.education {
 .proj {
     border-radius: 45px 45px 45px 45px;
     border: solid 1px rgb(201, 203, 204);
-    margin: 15px;
-    padding: 20px;
+    margin: 35px;
+    padding: 25px;
+    box-shadow: 10px 10px 30px #000000;
 }
 .contenedor {
     margin: 10px;

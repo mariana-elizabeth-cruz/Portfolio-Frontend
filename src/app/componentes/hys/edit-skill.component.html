@@ -1,6 +1,6 @@
 <div class="container" *ngIf="skill">
     <div class="row">
-        <div>
+        <div class="container">
             <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
                 <div class="form-group">
                     <label for="nombre">Nombre de la Skill</label>
@@ -9,6 +9,11 @@
                 <div class="form-group">
                     <label for="porcentaje">Ingrese el Porcentaje</label>
                     <input type="text" class="form-control"  id="porcentaje" name="porcentaje" [(ngModel)]="skill.porcentaje" required>
+                </div>
+                <!-- Falta agregar el color al backend y editar frontend -->
+                <div class="container">
+                    <label for="exampleColorInput" class="form-label">Color picker</label>
+                    <input type="color" class="form-control form-control-color" id="exampleColorInput" value="#563d7c" title="Choose your color">
                 </div>
                 <button class="btn btn-primary">
                     Actualizar

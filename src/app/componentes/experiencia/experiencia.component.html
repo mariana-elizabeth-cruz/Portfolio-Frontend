@@ -39,15 +39,15 @@
 
                 <!-- Tabla -->
                 <!-- filas -->
-                <div class="row">
+                <div class="row text-center">
                     <!-- columnas -->
-                    <div class="col-xl-3 col-sm-3 p-3 bd-highlight">
+                    <div class="col-xl-4 col-sm-3 p-3 bd-highlight">
                         <!-- falta imagen -->    
-                        <img [src]="'../assets/img/work.jpg'" class="img-fluid" alt="trabajo">
+                        <img [src]="'../assets/img/work.jpg'" class="img-fluid expeImg" alt="trabajo">
                     </div> 
-                    <div class="col-xl-9 col-sm-9 p-2 bd-highlight">
+                    <div class="col-xl-8 col-sm-9 p-2 bd-highlight">
                         <div class="card-body">
-                            <h4 class="card-title">{{experiencia.nombreExp}}</h4>
+                            <h3 class="card-title">{{experiencia.nombreExp}}</h3>
                             <p class="card-text text-muted">{{experiencia.descripcion}}</p>
                             <p class="card-text">{{experiencia.fechaInicio| date: "shortDate"}} - {{experiencia.fechaFin| date: "shortDate"}}</p>
 

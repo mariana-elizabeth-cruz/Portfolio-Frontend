@@ -6,6 +6,7 @@ h3 {
 .styleHS {
     border-radius: 45px 45px 45px 45px;
     border: solid 1px rgb(201, 203, 204);
-    margin: 15px;
-    padding: 20px;
+    margin: 35px;
+    padding: 25px;
+    box-shadow: 10px 10px 30px #000000;
 }
